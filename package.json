@@ -1,0 +1,61 @@
+{
+	"name": "n8n-nodes-peerbie",
+	"version": "0.1.0",
+	"description": "n8n nodes for PeerBie: start workflow runs, read workflows and items, and trigger on new items or stage changes.",
+	"license": "MIT",
+	"homepage": "https://peerbie.com",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"peerbie",
+		"workflow"
+	],
+	"author": {
+		"name": "PeerBie",
+		"email": "hello@peerbie.com",
+		"url": "https://peerbie.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/peerbie/n8n-nodes-peerbie.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "jest",
+		"smoke": "node scripts/smoke-me-401.mjs",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/PeerBieApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/PeerBie/PeerBie.node.js",
+			"dist/nodes/PeerBieTrigger/PeerBieTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "^0.54.4",
+		"@types/jest": "^30.0.0",
+		"eslint": "^9.39.4",
+		"jest": "^30.5.2",
+		"n8n-workflow": "^2.45.2",
+		"prettier": "^3.8.3",
+		"release-it": "^20.2.0",
+		"ts-jest": "^29.4.15",
+		"typescript": "^5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

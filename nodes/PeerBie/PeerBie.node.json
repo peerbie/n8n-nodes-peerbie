@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-peerbie.peerBie",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Productivity"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://github.com/peerbie/n8n-nodes-peerbie#credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/peerbie/n8n-nodes-peerbie#readme"
+			}
+		]
+	}
+}
